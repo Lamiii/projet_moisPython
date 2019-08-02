@@ -1,0 +1,73 @@
+.Pari{
+   font-size: 10em;
+}
+
+a{
+font-weight: bold;
+text-decoration: none;
+color: white;
+}
+.btn{
+	margin-right: 10%;
+}
+.lien{
+    padding-right: 40%;
+}
+.bt{
+    margin-left: 10%;
+}
+.im{
+height: 100vh;
+	width: 100%;
+	}
+
+.featurette-divider {
+  margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -.05rem;
+}
+
+footer
+{
+    height: 260px;
+    background-color: #444;
+}
+footer h1
+{
+    color:#fff;
+    text-align: center;
+    padding-top: 80px;
+}
+.copyright
+{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 30px;
+    color: #777;
+}
+
+
+
+.team-icon {
+    border-radius:100%;
+}
+
+.panel {
+    margin:0;
+    padding:0;
+    border-radius:0;
+
+}
+
+.panel-heading {
+    padding:1em;
+    border-radius:0;
+    }
+
+
+

@@ -1,0 +1,74 @@
+<!--{{res}}-->
+
+{% load static %}
+<!--{{new}}-->
+
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+  </head>
+<!------ Include the above in your HEAD tag ---------->
+<body class="bod">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand bt" href="#">PaPy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav  ml-auto btn">
+      <a class="nav-item nav-link active lien" href="/myapp/">Home<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active lien" href="pari">Pari-Sportif</a>
+      <a class="nav-item nav-link active lien" href="direct">Match Direct</a>
+      <a class="nav-item nav-link active lien" href="#" tabindex="-1" aria-disabled="true">A propos</a>
+    </div>
+  </div>
+    </nav>
+<h1>Match à venir</h1>
+<style>
+    .team-logo{}
+</style>
+<div class="container">
+  {% for i in res %}
+  <table class="table table-dark table-striped">
+    <thead>
+      <th>{{ i.ctgo }}</th>
+    </thead>
+    <tbody>
+    {% for t in i.match %}
+      <tr>
+        <td width="10">{{ t.heure }}</td>
+        <td width="10">En attente<a class="btn btn-light btn-sm" href="#">Pariez</a></td>
+        <td width="200" class="text-right">
+          <span>{{ t.eqa }}</span>
+          <img width="33" src="{{ t.img1 }}" class="rounded" alt="...">
+
+        </td>
+        <td class="text-center" width="10">
+           <span class="badge badge-light"> 0 - 0 </span>
+        </td>
+        <td width="200" class="text-left">
+            <img width="33" src="{{ t.img2 }}" class="rounded" alt="...">
+            <span>{{ t.eqb }}</span>
+        </td>
+        <td width="10">Statistiques</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endfor %}
+</div>
+     <footer>
+            <div class="wrapper">
+                <h1>PaPy<span class="orange">.</span></h1>
+                <div class="copyright">Copyright © 2019. Tous droits réservés.</div>
+			</div>
+     </footer>
+</body>
+
+</html>
